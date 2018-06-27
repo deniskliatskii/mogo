@@ -1,0 +1,96 @@
+
+//.wrap {
+//  width: 1230px;
+//  padding: 0 15px;
+//  margin: 0 auto;
+//  position: relative;
+//
+//  //@media screen and (max-width: 1400px) {
+//  //}
+//  //@media screen and (max-width: 1220px) {
+//  //  width: 992px;
+//  //}
+//  //@media screen and (max-width: 1012px) {
+//  //  width: 768px;
+//  //}
+//  //@media screen and (max-width: 788px) {
+//  //
+//  //}
+//  //@media screen and (max-width: 596px) {
+//  //
+//  //}
+//
+//}
+
+// media query mixin
+//@mixin respond($media) {
+//$sm: 576px;
+//$md: 768px;
+//$ld: 992px;
+//$xld: 1200px;
+//
+//  @if $media == mobile {
+//    @media screen and (min-width: $sm) {  // Small devices (landscape phones, 576px and up)
+//      @content;
+//    }
+//  } @else if $media == tablet {
+//      @media screen and (min-width: $md) {  // Medium devices (tablets, 768px and up)
+//        @content;
+//      }
+//  } @else if $media == sm-desktop {
+//      @media screen and (min-width: $ld) {  // Large devices (desktops, 992px and up)
+//        @content;
+//      }
+//  } @else if $media == desktop {
+//      @media screen and (min-width: $xld) {  // Extra large devices (large desktops, 1200px and up)
+//        @content;
+//      }
+//  }
+//
+//}
+
+
+@mixin respond($media) {
+  $sm: 320px; // small-mobile
+  $mm: 420px; // medium-mobile
+  $lm: 740px; // large-mobile
+  $ds: 1024px; // desktop-small
+  $dm: 1280px; // desktop-medium
+  $dl: 1600px; // desktop-large
+
+  @if $media == mobile {
+    @media screen and (min-width: $sm) { // small-mobile (320px and up)
+      @content;
+    }
+  } @else if $media == medium-mobile {
+    @media screen and (min-width: $mm) { // medium-mobile (420px and up)
+      @content;
+    }
+  } @else if $media == large-mobile {
+    @media screen and (min-width: $lm) { // large-mobile (740px and up)
+      @content;
+    }
+  } @else if $media == desktop-small {
+    @media screen and (min-width: $ds) { // desktop-small (1024px and up)
+      @content;
+    }
+  } @else if $media == desktop-medium {
+    @media screen and (min-width: $dm) { // desktop-medium (1280px and up)
+      @content;
+    }
+  } @else if $media == desktop-large {
+    @media screen and (min-width: $xdl) { // desktop-large (1600px and up)
+      @content;
+    }
+  }
+}
+
+
+// Шрифт в скобках указывать семейство шрифта, размер шрифта, начертание, цвет
+
+@mixin fonts ($fontFamily, $fontSize, $fontWeight, $fontColor ) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $fontColor;
+}

@@ -1,0 +1,73 @@
+.services {
+  padding: 110px 0 120px;
+}
+
+.services-top {
+  border-bottom: 1px solid #e5e5e5;
+  margin: 65px -5px 0;
+  padding-bottom: 50px;
+}
+
+.services-bottom {
+  margin: 0 -5px;
+  padding-top: 50px;
+}
+
+.services-top,
+.services-bottom {
+    > ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      > li {
+        display: flex;
+        justify-content: space-between;
+        max-width: 33.3%;
+        padding: 0 35px;
+      }
+    }
+}
+
+.services-logo {
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 33px;
+  margin-right: 25px;
+  width: 33px;
+  &.-topfirst {
+    background-image: url("../../img/services/alarm.png");
+  }
+  &.-topsecond {
+    background-image: url("../../img/services/line-graph.png");
+  }
+  &.-topthree {
+    background-image: url("../../img/services/monitor.png");
+  }
+  &.-bottomfirst {
+    background-image: url("../../img/services/seo.png");
+  }
+  &.-bottomsecond {
+    background-image: url("../../img/services/home.png");
+  }
+  &.-bottomthree {
+    background-image: url("../../img/services/image.png");
+  }
+}
+
+.services-descr {
+  width: 275px;
+  > .title {
+    color: $textColorHead;
+    font-family: $headFont;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  > .text {
+    color: $textColorContent;
+    font-family: $baseFont;
+    font-size: 15px;
+    font-weight: 400;
+  }
+}

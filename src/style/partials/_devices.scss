@@ -1,0 +1,29 @@
+.devices {
+  background: url("../../img/design-bg.jpg") center center no-repeat;
+  background-attachment: fixed;
+  padding-top: 105px;
+  position: relative;
+  width: 100%;
+    &:before {
+      background: rgba(255, 255, 255, .75);
+      content:'';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+}
+.devices-wrap {
+  position: relative;
+}
+
+.devices-tablet {
+  margin: 45px auto 0;
+}
+
+.devices-phone {
+  bottom: -60px;
+  left: 63%;
+  position: absolute;
+}
